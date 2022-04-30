@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+
+/* Roots */
+:root {
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-bright-yellow: hsl(71, 73%, 54%);
+  --clr-light-cyan: hsl(179, 49%, 58%);
+  --clr-light-gray: hsl(204, 43%, 93%);
+  --clr-grayish-blue: hsl(218, 22%, 67%);
+  --clr-white: #fff;
+}
+
+
+/* Main */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--clr-light-gray);
+  color: var(--clr-white);
+}
+
+p, span {
+  font-size: 1rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+
+
+/* Cards Section */
+.cards {
+  display: grid;
+  width: max(330px, 50vw);
+  margin: 10vh auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px -1px hsl(218, 22%, 67%);
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'two'
+    'three';
+}
+
+.card {
+  padding: 1.5rem 2.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+
+
+/* Card-1 Section */
+.card-1 {
+  background-color: var(--clr-white);
+  border-radius: 5px 5px 0 0;
+  grid-area: one;
+}
+
+h2 {
+  color: var(--clr-cyan);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card-1 h3 {
+  color: var(--clr-bright-yellow);
+}
+
+.card-1 p {
+  color: var(--clr-grayish-blue);
+}
+
+
+
+/* Card-2 Section */
+.card-2 {
+  background-color: var(--clr-cyan);
+  grid-area: two;
+}
+
+button {
+  background-color: var(--clr-bright-yellow);
+  color: var(--clr-white);
+  font-size: 1rem;
+  width: max(17vw, 15rem);
+  border-style: none;
+  padding: 15px 0;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px -1px hsl(179, 62%, 25%);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+
+/* Card-3 Section */
+.card-3 {
+  background-color: var(--clr-light-cyan);
+  line-height: 0.5;
+  border-radius: 0 0 5px 5px;
+  grid-area: three;
+}
+
+.card-3 h3 {
+  padding-bottom: 25px;
+}
+
+
+
+/* Responsiveness */
+@media (min-width: 1220px) {
+  .cards {
+    grid-template-areas:
+      'one one'
+      'two three';
+  }
+
+  .card-3 {
+    border-radius: 0 0 5px 0;
+  }
+}
